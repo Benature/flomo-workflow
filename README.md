@@ -1,6 +1,6 @@
 <a href="https://flomoapp.com/"><img src="./media/logo-192x192.png" height="100" align="right"></a>
 
-# [flomo](https://flomoapp.com/)
+# flomo workflow
 
 一个非官方的 API python 玩具盒
 
