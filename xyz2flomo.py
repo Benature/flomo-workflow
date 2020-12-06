@@ -3,9 +3,12 @@ import requests
 import json
 import sys
 
-from flomo import Flomo
-from notify import notify
-from config import cookies
+import flomo
+from config import cookies, notify_config
+
+
+def notify(t, m):
+    flomo.notify(t, m, **notify_config)
 
 
 cmd = sys.argv[1].split(' ')
@@ -43,7 +46,7 @@ if len(paste) > 0:
     richxerox.copy(html=content_html)
     notify("小宇宙👉剪贴板", title)
 else:
-    client = Flomo(cookies)
+    client = flomo.Flomo(cookies)
     response = client.new(content_html)
     response_json = json.loads(response.text)
     if response.status_code == 200:

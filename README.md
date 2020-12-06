@@ -9,7 +9,7 @@
 - 发送新的 flomo memo
 - 按模板创建 memo (inspired by [即刻@阿粒](https://m.okjike.com/originalPosts/5fc648d8c463ad00188e917a?s=ewoidSI6ICI1ZWUxZDQ1OGY5MmZiYzAwMTc3NWMwZTgiCn0=))
 
-> *prefer python3.7+*
+> *prefer python3.7+*  
 > 欢迎 Star 🌟、Fork 🍴、Issue 💬、PR. 一起让 flomo 用的更加得心应手
 
 ## Usage 使用
