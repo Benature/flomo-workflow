@@ -46,7 +46,7 @@ if len(paste) > 0:
     richxerox.copy(html=content_html)
     notify("小宇宙👉剪贴板", title)
 else:
-    client = flomo.Flomo(cookies)
+    client = flomo.Flomo(cookies=cookies)
     response = client.new(content_html)
     response_json = json.loads(response.text)
     if response.status_code == 200:

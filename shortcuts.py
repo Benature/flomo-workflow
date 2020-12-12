@@ -68,7 +68,7 @@ if __name__ == '__main__':
         richxerox.copy(html=content_html)
         # notify("小宇宙👉剪贴板", title)
     else:
-        client = flomo.Flomo(cookies)
+        client = flomo.Flomo(cookies=cookies)
         response = client.new(content_html)
         response_json = json.loads(response.text)
         print(response_json['message'])

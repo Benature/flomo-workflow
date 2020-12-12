@@ -12,7 +12,7 @@ import flomo
 folder_path = os.path.dirname(os.path.abspath(__file__))
 
 
-client = flomo.Flomo(cookies)
+client = flomo.Flomo(cookies=cookies)
 
 
 def notify(t, m):
