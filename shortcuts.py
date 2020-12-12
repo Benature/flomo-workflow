@@ -34,7 +34,7 @@ def get_jike(post_url):
 
     memo_content = f'#即刻/剪藏/{circle} {post_url}\n#社区/即刻/{username}\n'+content
     # print(memo_content)
-    return memo_content
+    return memo_content, content
 
 
 def get_xyz(url):
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     if 'xiaoyuzhoufm.com' in url:
         content, title = get_xyz(url)
     elif 'okjike.com' in url:
-        content = get_jike(url)
+        content, jike_content = get_jike(url)
 
     content_html = ''.join([f'<p>{c}</p>' for c in content.split('\n')])
 
