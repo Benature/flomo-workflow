@@ -11,14 +11,25 @@ server = flask.Flask(__name__)
 # server.config['JSON_AS_ASCII'] = False
 
 
-@server.route('/login', methods=['get', 'post'])
+@server.route('/memo', methods=['get', 'post'])
 def memo():
-    url = request.values.get('url')
+    #url = request.values.get('url')
+    #token = request.values.get('token')
+
+    data = json.loads(request.data.decode('utf-8'))
+    url = data['content']
+    token = data['token']
+
+    if token != 'shaonannblightnb': 
+        return json.dumps({'code':500, 'message':'who are u'})
 
     if 'xiaoyuzhoufm.com' in url:
         content, response_message = get_xyz(url)
     elif 'okjike.com' in url:
         content, response_message = get_jike(url)
+    else:
+        content = url
+        response_message = url
 
     content_html = ''.join([f'<p>{c}</p>' for c in content.split('\n')])
 
@@ -50,4 +61,4 @@ def memo():
 
 if __name__ == '__main__':
     # 指定端口、host,0.0.0.0代表不管几个网卡，任何ip都可以访问
-    server.run(debug=True, port=8888, host='0.0.0.0')
+    server.run(debug=False, port=8888, host='0.0.0.0')
