@@ -53,6 +53,8 @@ else:
         if response_json['code'] == 0:
             notify("小宇宙👉flomo", title)
         else:
+            print(response_json)
             notify("🚨 flomo Error", response_json['message'])
     else:
+        print(response_json)
         notify("🚨 flomo Failed", response_json['message'])
