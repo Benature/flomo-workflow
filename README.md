@@ -8,6 +8,7 @@
   - Alfred + flomo ([demo 视频](https://m.okjike.com/originalPosts/5fc1e8f0c5e485001882a2be?s=ewoidSI6ICI1ZWUxZDQ1OGY5MmZiYzAwMTc3NWMwZTgiCn0=))
 - 发送新的 flomo memo
 - 按模板创建 memo (inspired by [即刻@阿粒](https://m.okjike.com/reposts/5fc72ccb88f60f00189b1aa3?s=ewoidSI6ICI1ZWUxZDQ1OGY5MmZiYzAwMTc3NWMwZTgiCn0=))
+- [批量改 tag](replace_tag.py)
 
 > *prefer python3.7+*  
 > 欢迎 Star 🌟、Fork 🍴、Issue 💬、PR. 一起让 flomo 用的更加得心应手
